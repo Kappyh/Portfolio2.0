@@ -1,3 +1,54 @@
+/*New css3 grid system: 
+    https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Grid_Layout
+    https://www.chiefofdesign.com.br/guia-introdutorio-de-css-grid-layout/
+*/
+
+.mobile-container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "topo"
+    "about"
+    "portfolio"
+    "skills"
+    "contact"
+    "rodape";
+    grid-row-gap: 10px;
+}
+
+.topo{
+    grid-area:topo;
+    grid-row:1;
+    margin-bottom: 30px;
+}
+
+.about{
+    grid-area:about;
+    grid-column-start:1;
+    grid-column-end:1;
+    grid-row-start:2;
+    grid-row-end:3;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.portfolio{
+    grid-area: portfolio;
+    grid-row-start:3;
+    grid-row-end:4;
+    margin-bottom: 20px;
+    padding: 10px;
+    
+}
+
+
+
+/*
+    end of grid rules
+*/
+
 .menu-topo{
     background-color: #313131;
     width: 100%;
@@ -11,4 +62,24 @@
 .logo-img{
     width: 50%;
     height: 20%;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    left: 25%;
+}
+.banner-img{
+    width: 100%;
+}
+.content-title{
+    color: #003472;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 1.3em;
+    text-align: center;
+}
+.content-text{
+    color:#313131;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    text-align: center;
 }
